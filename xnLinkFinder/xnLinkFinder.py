@@ -268,7 +268,7 @@ REGEX_LINKSEQUAL = re.compile(r"%3d|\&equals;|\&#0?61;|\u003d|u003d|x3d|\x3d", r
 REGEX_LINKSEARCH1 = re.compile(r"^[^(]*\)+$")
 REGEX_LINKSEARCH2 = re.compile(r"^[^{}]*\}+$")
 REGEX_LINKSEARCH3 = re.compile(r"^[^\[]]*\]+$")
-REGEX_LINKSEARCH4 = re.compile(r"<\/")
+REGEX_LINKSEARCH4 = re.compile(r'<\/|src="([^"]+\.js)"')
         
 def write(text="", pipe=False):
     # Only send text to stdout if the tool isn't piped to pass output to something else,
